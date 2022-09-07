@@ -1,0 +1,21 @@
+apiGRPCServer:
+  host: localhost
+  port: 8191
+  timeoutConnection: 5
+
+apiHTTPServer:
+  host: localhost
+  port: 8192
+
+rmq:
+  use: true
+  host: localhost
+  port: 5672
+  login: guest
+  password: guest
+  queue: img
+
+kafka:
+  host: localhost
+  port: 19091
+  topic: img

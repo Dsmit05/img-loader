@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package api;
+option go_package = "img-loader/pkg/api;api";
+
+import "api/google/api/annotations.proto";
+
+
+service UserImage {
+  rpc PutImage(stream PutImageRequest) returns (PutImageResponse) {
+    option (google.api.http) = {
+      post: "/v1/img"
+      body: "*"
+    };
+  }
+
+
+}
+// ---------------------------------------------------------------------------------------------------------------------
+// PutImageRequest endpoint image info
+// ---------------------------------------------------------------------------------------------------------------------
+
+message PutImageRequest {
+  // Link to the photo
+  string url = 1;
+
+  string firstName = 2;
+
+  string lastName = 3;
+}
+
+message PutImageResponse {}

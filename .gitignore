@@ -1,0 +1,6 @@
+*.exe
+*.exe~
+
+/.idea/
+/Users
+logs.json
